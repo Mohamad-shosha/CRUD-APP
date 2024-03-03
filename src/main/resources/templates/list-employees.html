@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thmeleaf.org/extras/spring-security">
+<head>
+	<meta charset="UTF-8">
+	<title>Employee Management System</title>
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		  crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	<a class="navbar-brand" href="#">Employee Management System</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" th:href="@{/}">Home</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container mt-4">
+	<div class="row">
+		<h3>List of Employees</h3>
+	</div>
+	<div class="row">
+		<div class="col-lg-3">
+			<a th:href="@{/Employees/new}" class="btn btn-primary btn-sm mb-3">Add Employee</a>
+		</div>
+		<table class="table table-bordered table-striped">
+			<thead class="table-dark">
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Actions</th>
+			</tr>
+			</thead>
+
+			<tbody>
+			<tr th:each="tempEmployee : ${employees}">
+				<td th:text="${tempEmployee.firstName}" />
+				<td th:text="${tempEmployee.lastName}" />
+				<td th:text="${tempEmployee.email}" />
+				<td>
+					<a th:href="@{/employees/edit/{id}(id=${tempEmployee.id})}" class="btn btn-primary">Update</a>
+					<a th:href="@{/employees/{id}(id=${tempEmployee.id})}" class="btn btn-danger">Delete</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+
+		<form action="#" th:action="@{/logout}" method="POST">
+			<input type="submit" value="Logout" class="btn btn-secondary"/>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>
