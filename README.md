@@ -10,10 +10,8 @@ In CRUD-APP these technologies have been used Spring Boot Web, Spring Data JPA &
 - [Technologies](#Technologies)
 - [security](#security)
 - [Demo](#Demo)
- 
+- [Resourses](#Resourses)
 ## 🚀Features
-
-**Get started with this CRUD project and elevate your development experience with its rich feature set! **
 
 - Create, Read, Update, and Delete entities.
 - RESTful API design.
@@ -89,7 +87,7 @@ Step 1: Add Spring Security Dependency.🛡️
 In your pom.xml (for Maven) or build.gradle (for Gradle), add the Spring Security dependency
 
 Step 2: Handle User Authentication.🔐
-* This App uses in-memory authentication. * This step provide username,password and role For a production application.
+* This App uses in-memory authentication ,this step provide username,password and role For a production application.
 
 Step 3: Secure Endpoints
 * By specify which endpoints require authentication and authorization by configuring HttpSecurity.
@@ -101,3 +99,9 @@ Step 4: Define User Roles.🗝️
 ## 🎥Demo
 
 https://github.com/Mohamad-shosha/CRUD-APP/assets/150439621/4d162eeb-76c0-419f-bf11-a95ec06f5d06
+
+## 🗂️Resourses
+* [Spring boot](https://spring.io/why-spring)
+* [spring boot tutorial](https://spring.io/guides/gs/spring-boot)
+* [Professor chad darpy](https://luv2code.com/)
+  
