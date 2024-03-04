@@ -102,6 +102,6 @@ https://github.com/Mohamad-shosha/CRUD-APP/assets/150439621/4d162eeb-76c0-419f-b
 
 ## 🗂️Resourses
 * [Spring boot](https://spring.io/why-spring)
-* [spring boot tutorial](https://spring.io/guides/gs/spring-boot)
+* [Spring boot tutorial](https://spring.io/guides/gs/spring-boot)
 * [Professor chad darpy](https://luv2code.com/)
-  
+
