@@ -3,7 +3,7 @@
 This **CRUD** (Create, Read, Update, Delete) application serves as a user-friendly emoployee Management System. Built using java as a backend and bootstrap as a front-end , it enables efficient management of employees. Perform essential operations - create, view, update, and delete employees with ease.
 In CRUD-APP these technologies have been used Spring Boot Web, Spring Data JPA & Hibernate, MySQL Database, Thymeleaf, HTML5 & Bootstrap Spring Data JPA Test.
 
-## Table of Contents
+## 📝Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
@@ -39,7 +39,6 @@ Remove employee with a single click using the 'Delete' button.
 
 ---
 ## 📖prerequisites
-
 Before you begin, ensure you have met the following requirements:
 
 - Java Development Kit (JDK) installed.
@@ -79,12 +78,26 @@ Run your Spring Boot application. It will start a server at http://localhost:808
 
 ---
 ## 📚Technologies
-- [Features](#features)
-- [Prerequisites](#prerequisites)
 
 * IntelliJ IDEA Community Edition 2023.1.3
 * mysQL Workbench 8.0 CE
 * postman
 ---
 ## 🔑security
+
+Step 1: Add Spring Security Dependency.🛡️
+In your pom.xml (for Maven) or build.gradle (for Gradle), add the Spring Security dependency
+
+Step 2: Handle User Authentication.🔐
+* This App uses in-memory authentication. * This step provide username,password and role For a production application.
+
+Step 3: Secure Endpoints
+* By specify which endpoints require authentication and authorization by configuring HttpSecurity.
+
+Step 4: Define User Roles.🗝️
+* Define roles that represent different levels of access in your application , For example that apply on my app, you might have roles like ROLE_EMPLOYEE , ROLE_MANAGER and ROLE_ADMIN.
+* You can assign roles to users during user authentication.
+
 ## 🎥Demo
+
+https://github.com/Mohamad-shosha/CRUD-APP/assets/150439621/4d162eeb-76c0-419f-bf11-a95ec06f5d06
