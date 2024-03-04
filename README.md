@@ -84,7 +84,7 @@ Run your Spring Boot application. It will start a server at http://localhost:808
 ## 🔑security
 
 Step 1: Add Spring Security Dependency.🛡️
-In your pom.xml (for Maven) or build.gradle (for Gradle), add the Spring Security dependency
+* In your pom.xml (for Maven) or build.gradle (for Gradle), add the Spring Security dependency
 
 Step 2: Handle User Authentication.🔐
 * This App uses in-memory authentication ,this step provide username,password and role For a production application.
