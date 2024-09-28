@@ -19,8 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
-@RequestMapping("Myapp")
+@Controller
 public class EmployeeController {
 
     private final EmployeeService employeeService;
