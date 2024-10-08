@@ -1,0 +1,79 @@
+GET http://localhost:8080/Myapp/listForEmployee
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=00A2CFBD820CE0F4D61A5E95E9A21934
+cookie: JSESSIONID=00A2CFBD820CE0F4D61A5E95E9A21934
+content-length: 0
+
+###
+
+GET http://localhost:8080/Myapp/listForEmployee
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=28FA477AF824C001DDF22F30B5A176CF
+cookie: JSESSIONID=00A2CFBD820CE0F4D61A5E95E9A21934
+content-length: 0
+
+###
+
+GET http://localhost:8082/Myapp/listForEmployee
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+cookie: JSESSIONID=28FA477AF824C001DDF22F30B5A176CF
+content-length: 0
+
+###
+
+GET http://localhost:8081/Myapp/list
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+content-length: 0
+
+###
+
+GET http://localhost:8081/Myapp/list
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+content-length: 0
+
+###
+
+GET http://localhost:8081/Myapp/list
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+content-length: 0
+
+###
+
+GET http://localhost:8081/Myapp/showMyLoginPage
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+content-length: 0
+
+###
+
+GET http://localhost:8081/Myapp/showMyLoginPage
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+cookie: JSESSIONID=ADD27CCEA7F1A9C718767FB8333B9C6B
+content-length: 0
+
+###
+

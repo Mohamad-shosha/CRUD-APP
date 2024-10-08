@@ -25,19 +25,19 @@ public class DemoLoggingAspect {
 
     @Before("forAppFlow()")
     public void before (JoinPoint joinPoint){
-        String themethod = joinPoint.getSignature().toShortString();
-        mylogger.info(" ======>> in @Before calling method : "+themethod);
+        String theMethod = joinPoint.getSignature().toShortString();
+        mylogger.info(" ======>> in @Before calling method : "+ theMethod );
 
         Object [] args = joinPoint.getArgs();
         for (Object object : args){
             mylogger.info(" ======>> The argument is : " +object);
         }
     }
-    @AfterReturning(pointcut = "forAppFlow()", returning = "theresult")
-    public void after(JoinPoint joinPoint , Object theresult){
-        String themethod = joinPoint.getSignature().toShortString();
-        mylogger.info(" ======>> in @AfterReturning calling method : "+themethod);
-        mylogger.info(" The Result is : "+theresult);
+    @AfterReturning(pointcut = "forAppFlow()", returning = "theResult")
+    public void after(JoinPoint joinPoint , Object theResult){
+        String theMethod = joinPoint.getSignature().toShortString();
+        mylogger.info(" ======>> in @AfterReturning calling method : "+ theMethod);
+        mylogger.info(" The Result is : "+ theResult);
 
 
     }
