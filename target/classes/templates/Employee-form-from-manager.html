@@ -3,20 +3,17 @@
 <head>
   <meta charset="ISO-8859-1">
   <title>Student Management System</title>
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/employee-form.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <!-- Brand -->
   <a class="navbar-brand" href="#">Employee Management System</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -25,51 +22,41 @@
     </ul>
   </div>
 </nav>
-<br><br>
-<div class = "container" >
-  <div class = "row" >
-    <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-      <div class = "card-body">
-        <form th:action="@{/listForManager}" th:object = "${employee}" th:method="POST">
-          <h1 class = "text-center"> Add new Employee </h1>
-          <div class ="form-group">
-            <label> Employee First Name </label>
-            <input
-                    type = "text"
-                    name = "firstName"
-                    th:field = "*{firstName}"
-                    class = "form-control"
-                    placeholder="Enter Employee First Name"
-            />
-            <div class ="form-group">
-              <label> Employee Last Name </label>
-              <input
-                      type = "text"
-                      name = "lastName"
-                      th:field = "*{lastName}"
-                      class = "form-control"
-                      placeholder="Enter Employee Last Name"
-              />
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <div class="card">
+        <div class="card-header text-center">
+          <h3 class="card-title">Add New Employee</h3>
+        </div>
+        <div class="card-body">
+          <form th:action="@{/listForManager}" th:object="${employee}" th:method="POST">
+            <div class="form-group">
+              <label for="firstName">Employee First Name</label>
+              <input type="text" id="firstName" name="firstName" th:field="*{firstName}"
+                     class="form-control" placeholder="Enter Employee First Name" required />
             </div>
 
-            <div class ="form-group">
-              <label> Employee Email </label>
-              <input
-                      type = "text"
-                      name = "email"
-                      th:field = "*{email}"
-                      class = "form-control"
-                      placeholder="Enter Employee Email"
-              />
+            <div class="form-group">
+              <label for="lastName">Employee Last Name</label>
+              <input type="text" id="lastName" name="lastName" th:field="*{lastName}"
+                     class="form-control" placeholder="Enter Employee Last Name" required />
             </div>
-            <div class = "box-footer">
-              <button type="submit" class = "btn btn-primary">
+
+            <div class="form-group">
+              <label for="email">Employee Email</label>
+              <input type="email" id="email" name="email" th:field="*{email}"
+                     class="form-control" placeholder="Enter Employee Email" required />
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">
                 Submit
               </button>
             </div>
-          </div>
-        </form>
-
+          </form>
+        </div>
       </div>
     </div>
   </div>

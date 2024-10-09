@@ -33,7 +33,7 @@ public class EmployeeController {
         return "fancy-login";
     }
 
-    @GetMapping("/list")
+    @GetMapping("/Admin/list")
     public String listEmployeesForAdmin(Model theModel) {
         List<Employee> theEmployees = employeeService.findAll();
         theModel.addAttribute("employees", theEmployees);
@@ -48,7 +48,7 @@ public class EmployeeController {
         return "list-employees-For-Employee";
     }
 
-    @GetMapping("/listForManager")
+    @GetMapping("Manager/listForManager")
     public String listEmployeesFormToManager(Model theModel) {
         List<Employee> theEmployees = employeeService.findAll();
         // add to the spring model

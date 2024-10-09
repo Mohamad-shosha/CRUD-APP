@@ -33,8 +33,12 @@ public class RoleAccess {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
         http.authorizeHttpRequests(configurer ->
                         configurer
+                                .requestMatchers("/").hasRole("EMPLOYEE")
+                                    .requestMatchers("/Manager/**").hasRole("MANAGER")
+                                .requestMatchers("/Admin/**").hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
                 .formLogin(form ->
@@ -43,7 +47,13 @@ public class RoleAccess {
                                 .loginProcessingUrl("/authenticateTheUser")
                                 .permitAll()
                 )
-                .logout(LogoutConfigurer::permitAll);
+                .logout(LogoutConfigurer::permitAll
+                )
+                .exceptionHandling(configurer ->
+                        configurer.accessDeniedPage("/access-denied")
+                );
+
         return http.build();
     }
-}
+
+    }

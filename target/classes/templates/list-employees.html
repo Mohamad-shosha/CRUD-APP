@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thmeleaf.org/extras/spring-security">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 	<meta charset="UTF-8">
 	<title>Employee Management System</title>
@@ -7,9 +7,11 @@
 		  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 		  crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/list-employees.css">
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
 	<a class="navbar-brand" href="#">Employee Management System</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -25,42 +27,63 @@
 	</div>
 </nav>
 
+<!-- Main Content -->
 <div class="container mt-4">
 	<div class="row">
-		<h3>List of Employees</h3>
-	</div>
-	<div class="row">
-		<div class="col-lg-3">
-			<a th:href="@{/Employees/new}" class="btn btn-primary btn-sm mb-3">Add Employee</a>
+		<div class="col-lg-12 text-center">
+			<h3>List of Employees</h3>
 		</div>
-		<table class="table table-bordered table-striped">
-			<thead class="table-dark">
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email</th>
-				<th>Actions</th>
-			</tr>
-			</thead>
-
-			<tbody>
-			<tr th:each="tempEmployee : ${employees}">
-				<td th:text="${tempEmployee.firstName}" />
-				<td th:text="${tempEmployee.lastName}" />
-				<td th:text="${tempEmployee.email}" />
-				<td>
-					<a th:href="@{/employees/edit/{id}(id=${tempEmployee.id})}" class="btn btn-primary">Update</a>
-					<a th:href="@{/employees/{id}(id=${tempEmployee.id})}" class="btn btn-danger">Delete</a>
-				</td>
-			</tr>
-			</tbody>
-		</table>
-
-		<form action="#" th:action="@{/logout}" method="POST">
-			<input type="submit" value="Logout" class="btn btn-secondary"/>
-		</form>
 	</div>
+
+	<div class="row mb-3">
+		<div class="col-lg-3">
+			<a th:href="@{/Employees/new}" class="btn btn-primary">Add Employee</a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<table class="table table-bordered table-striped">
+				<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Actions</th>
+				</tr>
+				</thead>
+
+				<tbody>
+				<tr th:each="tempEmployee : ${employees}">
+					<td th:text="${tempEmployee.firstName}"></td>
+					<td th:text="${tempEmployee.lastName}"></td>
+					<td th:text="${tempEmployee.email}"></td>
+					<td>
+						<a th:href="@{/employees/edit/{id}(id=${tempEmployee.id})}" class="btn btn-primary">Update</a>
+						<a th:href="@{/employees/{id}(id=${tempEmployee.id})}" class="btn btn-danger">Delete</a>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- Logout Form -->
+	<form action="#" th:action="@{/logout}" method="POST" class="text-center">
+		<input type="submit" value="Logout" class="btn btn-secondary"/>
+	</form>
 </div>
+
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+		integrity="sha384-XsQfDmrGkMnVd5QW/xPddoB4xMzoz9/OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 
 </body>
 </html>

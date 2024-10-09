@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUV2CODE SYSTEMS HOME PAGE</title>
-    <!-- Include Bootstrap CSS for styling (optional) -->
+    <title>LUV2CODE SYSTEMS - Access Denied</title>
+    <!-- Include Bootstrap CSS for styling -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/access-denied.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h2 {
+            color: #dc3545; /* Bootstrap danger color */
+        }
+        .btn-primary {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<h2>Access Denied - You are not authorized to access this resource.</h2>
-<hr>
-<a class="btn btn-primary" th:href="@{/}">Back to Home Page</a>
+<div>
+    <h2>Access Denied</h2>
+    <p>You are not authorized to access this resource.</p>
+    <hr>
+    <a class="btn btn-primary" th:href="@{/}">Back to Home Page</a>
+</div>
 </body>
 </html>

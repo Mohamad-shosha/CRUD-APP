@@ -1,0 +1,96 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Main Container */
+.container {
+    margin-top: 2rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* Table Styling */
+table {
+    background-color: #f9f9f9;
+}
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+thead th {
+    background-color: #007bff;
+    color: #ffffff;
+}
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Button Styling */
+.btn-primary, .btn-danger {
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background-image: linear-gradient(120deg, #6dd5fa 0%, #2980b9 100%);
+    border: none;
+}
+.btn-primary:hover {
+    background-image: linear-gradient(120deg, #2980b9 0%, #6dd5fa 100%);
+    transform: translateY(-2px);
+}
+.btn-danger {
+    background-image: linear-gradient(120deg, #ff0844 0%, #ffb199 100%);
+    border: none;
+}
+.btn-danger:hover {
+    background-image: linear-gradient(120deg, #ffb199 0%, #ff0844 100%);
+    transform: translateY(-2px);
+}
+
+/* Logout Button */
+input[type="submit"] {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 30px;
+    background-color: #6c757d;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #343a40;
+    transform: translateY(-2px);
+}
+
+/* Responsive for small screens */
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+    .container {
+        padding: 1.5rem;
+    }
+}

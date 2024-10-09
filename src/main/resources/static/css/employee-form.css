@@ -1,0 +1,16 @@
+body {
+    background-color: #f8f9fa;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+.card {
+    border: 1px solid #007bff;
+}
+.card-header {
+    background-color: #007bff;
+    color: white;
+}
+.card-title {
+    margin-bottom: 0;
+}
