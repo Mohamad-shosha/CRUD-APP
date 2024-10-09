@@ -1,74 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thmeleaf.org/extras/spring-security">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luv2code Company Home Page</title>
   <!-- Include Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/home.css">
   <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa; /* Set your preferred background color */
-        }
 
-        .container {
-            margin-top: 50px;
-            text-align: center; /* Center-align the content within the container */
-        }
-
-        h2 {
-            color: #007bff;
-        }
-
-        p {
-            color: #343a40;
-            margin-bottom: 20px;
-        }
-
-        div {
-            margin-top: 20px;
-        }
-
-        a {
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+  </style>
 </head>
 <body>
 <div class="container">
-  <h2>Welcome to My System!😄</h2>
+  <h2 class="text-center">Welcome to My System</h2>
   <hr>
   <p>
     Welcome to this system! There are permissions for each layer of employees, managers, and owners of the company.
-    Employees are not allowed to modify data or add a customer. Managers are allowed to add and modify, and the owner
-    of the company has all permissions. This is applied in security.
+    Employees are not allowed to modify data or add a customer. Managers can add and modify data, while the owner
+    has all permissions. This is applied in security.
   </p>
-  <div sec:authorize="hasRole('EMPLOYEE')">
-    <a class="btn btn-primary" th:href="@{/listForEmployee}">Get List (Employee, Manager, and Admin)</a>
+
+  <p>
+    User: <span sec:authentication="principal.username"></span>
+    <br><br>
+    Role(s): <span sec:authentication="principal.authorities"></span>
+  </p>
+
+
+  <div sec:authorize="hasRole('EMPLOYEE')" class="text-center">
+    <a class="btn btn-primary" th:href="@{/listForEmployee}" role="button">Get List (Employee, Manager, and Admin)</a>
   </div>
-  <div sec:authorize="hasRole('MANAGER')">
-    <a class="btn btn-success" th:href="@{/listForManager}">Add and Update Employee (Manager and Admin)</a>
+  <div sec:authorize="hasRole('MANAGER')" class="text-center">
+    <a class="btn btn-success" th:href="@{/listForManager}" role="button">Add and Update Employee (Manager and Admin)</a>
   </div>
-  <div sec:authorize="hasRole('ADMIN')">
-    <a class="btn btn-danger" th:href="@{/list}">System Settings (Admin)</a>
+  <div sec:authorize="hasRole('ADMIN')" class="text-center">
+    <a class="btn btn-danger" th:href="@{/list}" role="button">System Settings (Admin)</a>
   </div>
+
   <hr>
-  <form action="#" th:action="@{/logout}" method="POST">
+  <form action="#" th:action="@{/logout}" method="POST" class="text-center">
     <input class="btn btn-secondary" type="submit" value="Logout" />
   </form>
 </div>

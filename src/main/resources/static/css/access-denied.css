@@ -1,0 +1,20 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8d7da; /* Light red for an error-like feel */
+    text-align: center;
+    padding: 50px;
+}
+
+h2 {
+    color: #721c24; /* Dark red for the header */
+}
+
+a {
+    color: #007bff; /* Blue for the link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
