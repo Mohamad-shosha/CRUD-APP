@@ -1,0 +1,48 @@
+body {
+    background-color: #e9ecef;
+    font-family: 'Arial', sans-serif;
+    color: #495057;
+}
+.container {
+    max-width: 800px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.btn {
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+.text-center {
+    margin-bottom: 20px;
+}
