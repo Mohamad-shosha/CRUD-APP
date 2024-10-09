@@ -75,13 +75,13 @@ public class EmployeeController {
     @PostMapping("/listForManager")
     public String saveStudentFromManager(@ModelAttribute("employee") Employee employee) {
         employeeService.save(employee);
-        return "redirect:/listForManager";
+        return "redirect:/Manager/listForManager";
     }
 
     @PostMapping("/list")
     public String saveStudent(@ModelAttribute("employee") Employee employee) {
         employeeService.save(employee);
-        return "redirect:/list";
+        return "redirect:/Admin/list";
     }
 
     @GetMapping("/employees/edit/{id}")
@@ -119,13 +119,13 @@ public class EmployeeController {
         existingStudent.setEmail(employee.getEmail());
 
         employeeService.save(existingStudent);
-        return "redirect:/list";
+        return "redirect:/Admin/list";
     }
 
     @GetMapping("/employees/{id}")
     public String deleteStudent(@PathVariable int id) {
         employeeService.deleteById(id);
-        return "redirect:/list";
+        return "redirect:/Admin/list";
     }
 
     @GetMapping("/access-denied")
