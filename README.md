@@ -1,4 +1,4 @@
-# CRUD Project with Spring Boot
+# 🌟 CRUD Project with Spring Boot
 
 This **CRUD** (Create, Read, Update, Delete) application serves as a user-friendly emoployee Management System. Built using java as a backend and bootstrap as a front-end , it enables efficient management of employees. Perform essential operations - create, view, update, and delete employees with ease.
 In CRUD-APP these technologies have been used Spring Boot Web, Spring Data JPA & Hibernate, MySQL Database, Thymeleaf, HTML5 & Bootstrap Spring Data JPA Test.
