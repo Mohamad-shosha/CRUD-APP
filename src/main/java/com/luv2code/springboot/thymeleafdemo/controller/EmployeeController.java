@@ -43,7 +43,6 @@ public class EmployeeController {
     @GetMapping("/listForEmployee")
     public String listEmployeesFormToEmployee(Model theModel) {
         List<Employee> theEmployees = employeeService.findAll();
-        // add to the spring model
         theModel.addAttribute("employees", theEmployees);
         return "list-employees-For-Employee";
     }

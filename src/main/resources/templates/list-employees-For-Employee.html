@@ -37,8 +37,6 @@
 
     <div class="row mb-3">
         <div class="col-lg-3">
-            <!-- Uncomment to add a button for new employees -->
-            <!-- <a th:href="@{/Employees/new}" class="btn btn-primary">Add Employee</a> -->
         </div>
     </div>
 
@@ -50,8 +48,6 @@
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
-                    <!-- Uncomment to add actions column -->
-                    <!-- <th>Actions</th> -->
                 </tr>
                 </thead>
 
@@ -60,11 +56,6 @@
                     <td th:text="${tempEmployee.firstName}"></td>
                     <td th:text="${tempEmployee.lastName}"></td>
                     <td th:text="${tempEmployee.email}"></td>
-                    <!-- Uncomment to add action buttons -->
-                    <!-- <td>
-                        <a th:href="@{/employees/edit/{id}(id=${tempEmployee.id})}" class="btn btn-primary">Update</a>
-                        <a th:href="@{/employees/{id}(id=${tempEmployee.id})}" class="btn btn-danger">Delete</a>
-                    </td> -->
                 </tr>
                 </tbody>
             </table>

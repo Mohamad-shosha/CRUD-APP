@@ -37,7 +37,7 @@ public class RoleAccess {
         http.authorizeHttpRequests(configurer ->
                         configurer
                                 .requestMatchers("/").hasRole("EMPLOYEE")
-                                    .requestMatchers("/Manager/**").hasRole("MANAGER")
+                                .requestMatchers("/Manager/**").hasRole("MANAGER")
                                 .requestMatchers("/Admin/**").hasRole("ADMIN")
                                 .anyRequest().authenticated()
                 )
@@ -56,4 +56,4 @@ public class RoleAccess {
         return http.build();
     }
 
-    }
+}
